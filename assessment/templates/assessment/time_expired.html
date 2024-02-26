@@ -1,0 +1,18 @@
+<!-- time_expired.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Expired</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Time Expired</h1>
+    <p>Your time for the test has expired!</p>
+    <a href="{% url 'assessment:results' %}">View Results</a>
+
+</body>
+</html>

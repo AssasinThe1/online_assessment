@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Online Assessment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #4caf50;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+    <h2>Available Tests</h2>
+    <ul>
+        {% for test in tests %}
+            <li>
+                <a href="{% url 'assessment:test' test.type_id %}">{{ test.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h3>Test Results</h3><a href="{% url 'assessment:results' %}">
+        <button>Results</button>
+    </a>
+
+    <h3>Logout</h3>    
+    <a href="{% url 'logout' %}">
+        <button>Logout</button>
+    </a>
+</body>
+</html>

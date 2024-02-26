@@ -1,0 +1,158 @@
+[
+    {
+        "type_id": 1,
+        "name": "Cat Trivia",
+        "questions": [
+            {
+                "text": "What is a group of cats called?",
+                "choices": [
+                    {"text": "A Clowder", "is_correct": true},
+                    {"text": "A Pack", "is_correct": false},
+                    {"text": "A Flock", "is_correct": false},
+                    {"text": "A School", "is_correct": false}
+                ]
+            },
+            {
+                "text": "Which cat is known for having no tail?",
+                "choices": [
+                    {"text": "Manx", "is_correct": true},
+                    {"text": "Siamese", "is_correct": false},
+                    {"text": "Persian", "is_correct": false},
+                    {"text": "Bengal", "is_correct": false}
+                ]
+            },
+            {
+                "text": "What is the average lifespan of a cat?",
+                "choices": [
+                    {"text": "10-12 years", "is_correct": false},
+                    {"text": "12-15 years", "is_correct": true},
+                    {"text": "15-18 years", "is_correct": false},
+                    {"text": "18-20 years", "is_correct": false}
+                ]
+            },
+            {
+                "text": "What is the most popular breed of cat?",
+                "choices": [
+                    {"text": "Siamese", "is_correct": false},
+                    {"text": "Persian", "is_correct": false},
+                    {"text": "Main", "is_correct": false},
+                    {"text": "Bengal", "is_correct": true}
+        ]
+    },
+    {
+        "text": "What is the scientific name for a cat?",
+        "choices": [
+            {"text": "Felis catus", "is_correct": true},
+            {"text": "Felis silvestris", "is_correct": false},
+            {"text": "Felis domesticus", "is_correct": false},
+            {"text": "Felis sylvestris", "is_correct": false}
+        ]
+    },
+    {
+        "text": "What is the average number of hours a cat sleeps per day?",
+        "choices": [
+            {"text": "10-12 hours", "is_correct": false},
+            {"text": "12-15 hours", "is_correct": true},
+            {"text": "15-18 hours", "is_correct": false},
+            {"text": "18-20 hours", "is_correct": false}
+        ]
+    },
+    {
+        "text": "What is the average number of whiskers on a cat?",
+        "choices": [
+            {"text": "12", "is_correct": false},
+            {"text": "16", "is_correct": false},
+            {"text": "20", "is_correct": true},
+            {"text": "24", "is_correct": false}
+        ]
+    },
+    {
+        "text": "What is the average number of toes on a cat?",
+        "choices": [
+            {"text": "16", "is_correct": false},
+            {"text": "18", "is_correct": false},
+            {"text": "20", "is_correct": false},
+            {"text": "24", "is_correct": true}
+        ]
+    },
+    {
+        "text": "What is the average number of teeth on a cat?",
+        "choices": [
+            {"text": "24", "is_correct": false},
+            {"text": "26", "is_correct": true},
+            {"text": "28", "is_correct": false},
+            {"text": "30", "is_correct": false}
+        ]
+    },
+    {
+        "text": "What is the average number of bones in a cat's body?",
+        "choices": [
+            {"text": "230", "is_correct": false},
+            {"text": "240", "is_correct": false},
+            {"text": "250", "is_correct": true},
+            {"text": "260", "is_correct": false}
+        ]
+    }
+]
+},
+{
+    "type_id": 2,
+    "name": "Dog Trivia",
+    "questions":[
+        {
+            "text": "What is a group of dogs called?",
+            "choices": [
+                {"text": "A Pack", "is_correct": true},
+                {"text": "A Clowder", "is_correct": false},
+                {"text": "A Flock", "is_correct": false},
+                {"text": "A School", "is_correct": false}
+            ]
+        },
+        {
+            "text": "Which dog is known for having a blue-black tongue?",
+            "choices": [
+                {"text": "Golden Retriever", "is_correct": false},
+                {"text": "Labrador Retriever", "is_correct": false},
+                {"text": "Chow Chow", "is_correct": true},
+                {"text": "Poodle", "is_correct": false}
+            ]
+        },
+        {
+            "text": "What is the average lifespan of a dog?",
+            "choices": [
+                {"text": "10-12 years", "is_correct": false},
+                {"text": "12-15 years", "is_correct": true},
+                {"text": "15-18 years", "is_correct": false},
+                {"text": "18-20 years", "is_correct": false}
+            ]
+        },
+        {
+            "text": "What is the most popular breed of dog?",
+            "choices": [
+                {"text": "Golden Retriever", "is_correct": false},
+                {"text": "Labrador Retriever", "is_correct": true},
+                {"text": "Chow Chow", "is_correct": false},
+                {"text": "Poodle", "is_correct": false}
+            ]
+        },
+        {
+            "text": "What is the scientific name for a dog?",
+            "choices": [
+                {"text": "Canis lupus", "is_correct": false},
+                {"text": "Canis lupus familiaris", "is_correct": true},
+                {"text": "Canis lupus dingo", "is_correct": false},
+                {"text": "Canis lupus arctos", "is_correct": false}
+            ]
+        },
+        {
+            "text": "What is the average number of hours a dog sleeps per day?",
+            "choices": [
+                {"text": "10-12 hours", "is_correct": false},
+                {"text": "12-15 hours", "is_correct": true},
+                {"text": "15-18 hours", "is_correct": false},
+                {"text": "18-20 hours", "is_correct": false}
+    ]
+        }
+]
+}
+]

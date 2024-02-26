@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #4caf50;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Your Test Results</h1>
+    <ul>
+        {% for submission in submissions %}
+            <li>
+                Test taken: {{ submission.test.name }}<br>
+                Score: {{ submission.score }}<br>
+                <!-- TODO Table karo Time stamp-->
+                
+            </li>
+        {% empty %}
+            <li>No tests taken yet.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'assessment:home' %}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        #timer {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="radio"] {
+            margin: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+    <script>
+        window.onload = function() {
+        var remainingTime = {{ remaining_time }};
+        var timer = setInterval(function() {
+            var minutes = parseInt(remainingTime / 60, 10);
+            var seconds = parseInt(remainingTime % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById('timer').textContent = minutes + ":" + seconds;
+
+            if (--remainingTime <= 0) {
+                clearInterval(timer);
+                // Auto-submit the test form
+                document.getElementById('test-form').submit();
+            }
+        }, 1000);
+    }
+    </script>
+</head>
+<body>
+    <h1>Take the Test</h1>
+    <div>Time left: <span id="timer"></span></div>
+    <form id="test-form" action="{% url 'assessment:submit' %}" method="post">
+        {% csrf_token %}
+        {% for question in questions %}
+            <div>
+                <p>{{ question.text }}</p>
+                {% for choice in question.choice_set.all %}
+                    <input type="radio" name="question_{{ question.id }}" value="{{ choice.id }}"> {{ choice.text }}<br>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
